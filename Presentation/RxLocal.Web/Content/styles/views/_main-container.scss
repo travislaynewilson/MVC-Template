@@ -1,0 +1,31 @@
+﻿.view-main-container {
+    position: relative; 
+    height: 100%;
+
+    .navbar {
+        -webkit-box-shadow: 0 0 1px rgba(0,0,0,.3);
+        box-shadow: 0 0 1px rgba(0,0,0,.3);
+        border: none;
+        min-height: 64px;
+        margin-bottom: 0;
+    }
+
+    .navbar-default {
+        background-color: #fff;
+    }
+
+    .navbar-fixed-top {
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+        top: 0;
+        border-width: 0 0 1px;
+    }
+
+    @media (min-width: 993px) {
+        .navbar-fixed-top {
+            margin-left: 260px !important;
+        }
+    }
+}

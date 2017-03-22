@@ -1,0 +1,28 @@
+﻿@model RxLocal.Web.ViewModels.Authentication.LoginViewModel
+@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+    ViewBag.Title = "Login";
+}
+
+<div class="view-login">
+    <h2>@ViewBag.Title</h2>
+
+
+    @Html.ValidationSummary(false)
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(c => c.LoginName, new { @class = "sr-only" })
+        @Html.TextBoxFor(c => c.LoginName, new { @class = "form-control loginname", placeholder = "Username", autofocus = true })
+        @Html.ValidationMessageFor(c => c.LoginName)
+
+        @Html.LabelFor(c => c.Password, new { @class = "sr-only" })
+        @Html.PasswordFor(c => c.Password, new { @class = "form-control password", placeholder = "Password" })
+        @Html.ValidationMessageFor(c => c.Password)
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+        @Html.AntiForgeryToken()
+    }      
+</div>

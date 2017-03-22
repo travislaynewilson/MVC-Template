@@ -1,0 +1,83 @@
+﻿.view-main-sidebar {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    left: 0;
+    width: 260px;
+    margin: 0;
+    padding-bottom: 60px;
+    z-index: 1037;
+    will-change: left;
+    font-size: 13px;
+    overflow: auto;
+    background: #474747;
+    color: #FFF;
+    border-right: 1px rgba(0,0,0,.07)solid;
+
+    .brand-logo {
+        min-height: 64px;
+        color: #868686;
+        line-height: 64px;
+        text-align: center;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    .user-logged-in {
+        min-height: 100px;
+        position: relative;
+        display: table;
+        width: 100%;
+        -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,.1);
+        box-shadow: inset 0 0 2px rgba(0,0,0,.1);
+
+        &:after {
+            background: url('../images/bg-sidebar-user.png');
+            background-size: cover;
+            opacity: .2;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+            content: "";
+        }
+
+        .content {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 0 22px;
+            text-transform: uppercase;
+
+            .user-name {
+                font-size: 16px;
+                line-height: 18px;
+
+                .f9 {
+                    font-size: 9px;
+                }
+            }
+
+            .user-email {
+                font-size: 13px;
+                color: #999;
+                line-height: 15px;
+            }
+
+            .user-actions {
+                margin-top: 7px;
+                font-size: 10px;
+
+                a, a:focus, a:hover {
+                    color: #90CAF9;
+                    margin-right: 5px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
